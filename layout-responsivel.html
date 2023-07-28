@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout responsivel</title>
+    <style>
+        * { box-sizing: border-box;}
+
+        html { font-size: 16px;}
+
+        body { font-family: verdana, sans-serif;
+               background-color: beige; 
+        }
+
+        #container {
+            background-color: white;
+            box-shadow: black 0 0 10px;
+            padding: 1%;
+        }
+
+        header {
+            background-color: dodgerblue;
+            text-align: center;
+        }
+
+         /* CSS reset */
+        h1,h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav { background-color: yellow;}
+
+        #colunaA {background-color: rgb(163, 187, 163);}
+
+        #colunaB {background-color: rgb(185, 133, 35);}
+
+        #colunaC {background-color: rgb(106, 79, 138);}
+
+        footer { background-color: gray;}
+
+        h2 { padding: 0.5rem;}
+        p { padding: 1rem;}
+
+        /* Pegar todos os artigos
+        utilizamos min-height para garantir que
+        todos os lados tenham pelo manos a altura, específicas
+         */
+        .colunaA, .colunaB, .colunaC { min-height: 300px;}
+
+        /* Media Queries */
+        
+        /* regras para telas a partir de 700px de largura */
+        @media screen and (min-width: 700px){
+            header {
+                display: flex;
+                justify-content: space-between;
+                height: 80px;
+                align-items: center;
+            }
+
+            nav {
+                height: 40px;
+                width: 50%;
+
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            main { display: flex;
+            
+             /* A propriedade flex-wrap habilita a "quebra" do flex, ou seja, os itens ficarão lado a lado enquanto houver espaço. Quando não houver, o próximo item irá para baixo.  */
+            
+             flex-wrap: wrap;
+            }
+            /* 10 20 46 41 */
+
+            #colunaA { width: 60%}
+            #colunaB { width: 40%}
+            #colunaC { width: 100%}
+
+
+        }  /* FIM DA MÉDIA QUERY */
+
+        @media screen and (min-width: 33.33%){
+            #colunaA, #colunaB, #colunaC { width: 33.33%;}
+            #container {
+                max-width: 1100px;
+                margin: auto;
+            }
+
+            /* Aumentando o tamanho de todos os textos */
+            html{ font-size: 20px;}
+        }
+
+        
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div id="container">
+
+        <header>
+            
+    <h1>Mobile First</h1>
+            <nav>
+                <a href="">link</a>
+                <a href="">link</a>
+                <a href="">link</a>
+            </nav>
+        </header>
+
+        <main>
+            <article id="colunaA">
+            <h2>Coluna A</h2>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque nam eveniet exercitationem sit, voluptatem blanditiis quibusdam ipsum delectus repellat quod repudiandae vitae sed minima distinctio tempore dicta voluptas molestiae sunt!
+            Doloremque facilis quas repudiandae aspernatur porro cumque repellat! Nesciunt iure tenetur aperiam? Tempora tempore saepe excepturi libero vel commodi quaerat dolore mollitia sunt, eum laborum, officiis maxime repudiandae, molestiae nostrum.
+            Repellat totam voluptas dicta molestiae, explicabo maiores perferendis mollitia cum. Unde consequatur dolores esse ipsam saepe porro, est officiis et fugiat autem. Debitis eos sapiente odit, consequatur tenetur dignissimos sunt!
+            Cupiditate consectetur voluptatibus animi perspiciatis dolor, fugiat asperiores reprehenderit commodi laudantium temporibus modi! Velit optio obcaecati assumenda? Quod nemo reiciendis at autem, laboriosam consequatur id suscipit hic, voluptatum adipisci inventore.
+            Qui dolores quisquam veniam omnis iste odio vero blanditiis voluptatibus recusandae, hic inventore earum molestias reprehenderit aspernatur saepe, possimus magnam, dolorem excepturi atque ipsam eum repellendus. Consectetur sint optio vel?</p>
+        </article>
+
+        <article id="colunaB">
+            <h2>Coluna B</h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ducimus incidunt, vel magni debitis earum veniam laboriosam a assumenda provident ipsa reiciendis. Maiores nisi voluptatibus porro doloribus nulla, quisquam repudiandae?
+            Ea ut labore sequi! Officiis deserunt quisquam alias numquam, quaerat officia architecto sequi veniam, nulla dolore nihil consequatur, esse earum rem accusamus sint laudantium culpa libero odit voluptas. Doloremque, reprehenderit?
+            Minus quibusdam explicabo quo dolorum eveniet repellat atque aliquam ea dolore! Molestiae, amet tempora quibusdam at harum illo sit, odio cupiditate ab delectus omnis nulla numquam itaque cum iste molestias?
+            Temporibus cupiditate perferendis qui incidunt, vitae nulla! Ab mollitia sint sunt esse laudantium error, cumque iure labore ea officiis saepe! Blanditiis quam voluptates consequatur ratione veniam repudiandae eaque modi ullam!
+            Natus debitis in culpa corporis voluptates iste praesentium temporibus aspernatur, reiciendis recusandae, eos distinctio, pariatur omnis eligendi quia. Eligendi eum vitae expedita veritatis unde consequuntur fugiat illum reprehenderit aliquid laborum.</p>
+        </article>
+
+        <article id="colunaC">
+            <h2>Coluca C</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, possimus rem eos illo eligendi cum tempore omnis nesciunt dolorem vel assumenda labore sit quibusdam voluptatibus harum minima non! Aperiam, distinctio!
+            Blanditiis quia inventore quasi nostrum eaque, accusantium officia itaque et nihil iste quam minus commodi! Fugiat id qui quia, minima nam fuga asperiores dolore! Expedita animi similique numquam cum id?
+            At rerum id deleniti repellat placeat, iste obcaecati voluptate eaque aliquid facilis adipisci delectus explicabo ut deserunt assumenda error quos rem quaerat veritatis! Cum cumque accusantium, ut explicabo reprehenderit a.
+            Repudiandae, quia atque corporis consequuntur rem commodi deleniti mollitia, ipsum repellendus facilis, non provident praesentium! Pariatur provident cumque ex libero magni, soluta unde? Dignissimos adipisci cum corrupti dicta doloribus ipsum.
+            Tempore nisi quaerat cum illo autem, quasi consequuntur, impedit error eos natus atque voluptate ipsa totam, doloremque explicabo dicta sunt dolor? Eius sapiente cumque ipsam hic asperiores in molestiae eum.</p>
+        </article>
+        </main>
+
+        <footer>
+            <h2>Lorem, ipsum dolor.</h2>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagens01</title>
+</head>
+<body>
+    <h1>Trabalhando com imagens</h1>
+     <hr>
+        <p>Formatos mais comuns para web</p>
+
+            <ul>
+               <il>JPEG/JPG: em geral para fotos co suporte para milhões de cores e com compressão.</il>
+               <il>GIF: usado para desenhos, suporta também animação e transparência.</il>
+               <il>PNG: combinação do jpeg e do jpg. Bom para fotos com milhões de cores, suporte a compressão e transparência.</il>
+               <il>SVG: É um Formato vetorial, ou seja, baseado em nós, segmentos, linhas. Bom para ilustrações e para casos em que será necessário redimensionar a imagem.</il>
+            </ul>
+
+    <h2>Exemplos:</h2>
+
+<!-- 
+  -tag: <img>
+  -atributos: 
+    src:indica o caminho do arquivo de imagem e o próprio aequivo
+    alt:texto alternativo (pequena descrição da imagem)
+-->
+    <img src="imagens/pink-floyd.jpg" alt="Integrantes da banda assenando para o público">
+
+<!-- Imagens dentro de outras tags -->
+
+    <p>
+     <img src="imagens/logo-html5.png" alt="">
+     <img src="imagens/logo-css3.gif" alt="">
+     <img src="imagens/logo-javascript.gif" alt="">
+    </p>
+<!-- imagens ão colocadas lado a lado se houver espaço -->
+    <p><img src="imagens/dedos.jpg" alt="">
+       <img src="imagens/ideias.jpg" alt="">
+       <img src="imagens/pacoca.jpg" alt="">
+    </p>
+<!-- paragrafo por paragrafo vai ficar um em cima do outro -->
+    <p><img src="imagens/dedos.jpg" alt=""></p>
+    <p><img src="imagens/ideias.jpg" alt=""></p>
+    <p><img src="imagens/pacoca.jpg" alt=""></p>
+
+<!-- novidades de imagens no HTML5 -->
+
+<figure>
+    <img src="imagens/stonehenge.jpg" alt="">   <figcaption>Ruínas do StoneHenge</figcaption>
+</figure>
+
+    <!-- imagens png/jpg/gif: BITMAP (formadas por pixels) -->
+    <p><img src="imagens/black-cat.png" alt=""></p>
+
+    <!-- imagem svg: VETOR (formada por nós, linhas) -->
+    <p><img src="imagens/black-cat.svg" alt=""></p>
+
+
+</body>
+</html>
